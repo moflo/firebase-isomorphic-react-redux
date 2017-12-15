@@ -1,6 +1,6 @@
-# Isomorphic React App
+# Firebase Isomorphic React Redux App
 
-This sample shows how to create an isomorphic React application using using Functions, Hosting, and Realtime Database.
+This is a fork of the official Firebase isomorphic react app sample that shows how to create an isomorphic React application using using Functions, Hosting, and Realtime Database -- using Redux for simple account access feature reducers.
 
 During the initial request to your app, Hosting will proxy your request to a Node express server.
 The server will then load any data that's necessary for your app (through the Realtime Database). It will also generate the markup that's needed from React. It will inject the markup with the preloaded state before passing it to the client.
