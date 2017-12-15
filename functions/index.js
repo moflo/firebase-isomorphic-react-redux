@@ -41,6 +41,10 @@ app.get('/favicon.ico', function(req, res) {
   res.send(204);
 });
 
+app.get('/index', (req, res) => {
+  renderApplication(req.url, res, {auth: 'DEADBEEF'});  
+});
+
 app.get('/:userId?', (req, res) => {
   res.set('Cache-Control', 'public, max-age=60, s-maxage=180');
   if (req.params.userId) {

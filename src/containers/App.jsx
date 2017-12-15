@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router';
 import { Link } from 'react-router-dom';
 import Home from '../components/Home';
 import User from '../components/User';
+import Index from '../components/Index';
 import database from 'firebase-database';
 
 export default class App extends React.Component {
@@ -52,6 +53,11 @@ export default class App extends React.Component {
           </div>
         </nav>
         <Switch>
+          <Route path='/index' render={(props) => (
+            <Index {...props}
+            auth={this.state.auth}
+          />
+          )} />
           <Route path='/:id' render={(props) => (
             <User {...props}
               currentEmployee={this.state.currentEmployee}
